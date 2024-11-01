@@ -1,0 +1,328 @@
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+}  
+
+body{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: 700; 
+    /* background-color: rgba(247, 247, 255,1);  */
+    background-color: hsl(240, 78%, 98%);
+    min-height: 100vh; 
+    background-image: url(images/bg-top.svg),url(images/bg-bottom.svg);
+    background-position: top right,bottom left;
+    background-repeat: no-repeat; 
+    background-size: auto, auto; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heading{
+    
+    position: fixed;
+    top:10%;
+
+    font-size: 30px;
+    
+    color : rgb(63, 67, 147);
+  
+} 
+
+
+.toggle-container {
+
+    position: fixed;
+    top:18%;
+
+    font-size: 20px; 
+
+    color: rgb(63, 67, 147);
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;
+    
+}
+
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+} 
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+} 
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(63, 67, 147,0.75);
+    /* transition: 0.4s; */
+    border-radius: 34px;
+}  
+
+/* For the cirular knob */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px; 
+    background-color: white; 
+    transition: 0.5s; 
+    border-radius: 50%;
+}  
+
+/* Checked State */
+input:checked + .slider {
+    background-color: rgba(63, 67, 147,0.75);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+} 
+
+
+
+.container{
+
+    height: 60vh;
+    width: 70%;
+    /* border: 2px solid black; */
+
+    bottom: 20px;
+   
+    position: absolute;
+    bottom: 10%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}  
+
+
+.box{
+
+    height: 100%;
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px; 
+    align-items: center;  
+    
+    margin: 0 10px;
+    font-size: x-large; 
+} 
+
+
+.box button{
+    width: 80%;
+    padding: 10px;
+    background-color: hsl(233, 13%, 49%);
+    color: white;
+    border-color: white;
+    
+    border-radius: 10px;
+}
+
+.box h1{
+    font-size: 50px;
+}
+
+.box h5{
+    font-size: large;
+    opacity: 0.75;
+} 
+
+.box hr {
+    width: 80%; 
+    border: 1px solid gray;
+    opacity: 0.5; 
+    
+} 
+
+.box:hover{
+
+    transform: scale(1.1);
+    transition: all 0s ease-in 0s;
+    
+    cursor: pointer;
+    background-color: rgba(63, 67, 147,0.75) ;
+    color: white; 
+
+}
+
+.box:hover button{
+
+    
+    background-color: white;
+    color: rgba(63, 67, 147,0.75);
+    
+}
+
+.box:hover hr {
+    width: 80%; 
+    border: 1px solid white;
+    opacity: 0.5; 
+   
+} 
+
+
+
+
+@media (max-width: 768px) {
+    
+    #heading {
+        font-size: 32px; 
+         
+        position: absolute; 
+        top: 5%; 
+    }
+
+    .toggle-container{
+        position: absolute;
+        top:12%;
+    }
+   
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+        width: 90%; 
+        height: auto; 
+        position: relative;  
+        margin-top: 150px; 
+    }
+
+    
+    .box {
+        width: 80%; 
+        height: auto; 
+        gap:10px; 
+        margin: 15px 0; 
+        padding: 20px; 
+    }
+
+    
+    .box button {
+        width: 90%;
+        font-size: medium; 
+        padding: 12px;
+    }
+
+    .box h1{
+        font-size: 50px;
+    }
+
+    #box2{
+        background-color: rgba(63, 67, 147,0.75) ;
+        color: white; 
+    }
+
+    
+    .box hr {
+        width: 90%; 
+    }
+
+    body {
+        background-position: top right,bottom left;
+        background-size: 50%,30%;
+    }
+
+
+
+}
+   
+
+/* @media (min-width:431px) and (max-width:767px){
+
+    .box h1{
+
+       
+        align-items: center; 
+    }
+
+}   
+ */
+
+
+
+/* #box2{
+    height: 65%;
+    width: 20%;
+    border: 2px solid rgba(63, 67, 147,0.75);
+    border-radius: 10px;
+    background-color: rgba(63, 67, 147,0.75) ;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px; 
+    align-items: center; 
+    
+    font-size: xx-large;
+   
+}  */
+
+/* #box2 hr{
+    width: 100%; 
+    border: 1px solid white; 
+    opacity: 0.5; 
+} */
+
+/* #box2 button{
+    width: 100%;
+    padding: 10px;
+    color: rgb(63, 67, 147);
+    border-color: rgba(63, 67, 147,0.75);
+    border-radius: 10px;
+
+} */
+
+
+/* #box3{
+    height: 60%;
+    width: 20%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    
+    font-size: xx-large;
+}
+
+#box3 button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(63, 67, 147);
+    color: white;
+    border: none;
+} */
+
+
