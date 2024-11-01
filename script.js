@@ -9,7 +9,7 @@ toggleSwitch.addEventListener("keydown", (event) => {
     toggleSwitch.checked = !toggleSwitch.checked;  // Toggle the state
     updatePrices();  
   }
-});
+}); 
 
 toggleSwitch.addEventListener("change", updatePrices);
 
