@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding:0;
-    /* box-sizing: border-box; */
+    
 }  
 
 body{
@@ -66,7 +66,7 @@ body{
 
 .slider {
     position: absolute;
-    cursor: pointer;
+    cursor: pointer; 
     top: 0;
     left: 0;
     right: 0;
@@ -75,6 +75,7 @@ body{
     /* transition: 0.4s; */
     border-radius: 34px;
 }  
+
 
 /* For the cirular knob */
 .slider:before {
@@ -151,7 +152,13 @@ input:checked + .slider:before {
     
     transform: scale(1.1);
 
-    background-color: rgba(63, 67, 147,0.75) ;
+    /* background-color: rgb(165, 147, 224) ; */
+
+    /* background-color: rgba(63, 67, 147,0.5); */
+
+    /* background-color: rgb(149, 154, 236); */
+
+    background-color: hsl(237, 63%, 64%) ;
     color: white; 
     
     margin: 0 10px;
@@ -260,7 +267,7 @@ input:checked + .slider:before {
     }
 
     
-    .box {
+    #box1,#box3 {
         width: 80%; 
         height: auto; 
         gap:10px; 
@@ -280,6 +287,11 @@ input:checked + .slider:before {
     }
 
     #box2{
+        width: 80%; 
+        height: auto; 
+        gap:10px; 
+        margin: 15px 0; 
+        padding: 20px; 
         background-color: rgba(63, 67, 147,0.75) ;
         color: white; 
     }
