@@ -45,7 +45,7 @@ body{
 
     justify-content: center;
     align-items: center; 
-    gap: 20px;
+    gap: 20px; 
     
 }
 
@@ -117,7 +117,7 @@ input:checked + .slider:before {
 }  
 
 
-.box{
+#box1,#box3{
 
     height: 100%;
     width: 50%;
@@ -135,12 +135,46 @@ input:checked + .slider:before {
     font-size: x-large; 
 } 
 
+#box2{
 
-.box button{
+    height: 100%;
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 10px;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px; 
+    align-items: center; 
+    
+    transform: scale(1.1);
+
+    background-color: rgba(63, 67, 147,0.75) ;
+    color: white; 
+    
+    margin: 0 10px;
+    font-size: x-large; 
+} 
+
+
+#box1 button,#box3 button{
     width: 80%;
     padding: 10px;
     background-color: hsl(233, 13%, 49%);
     color: white;
+    border-color: white;
+    
+    border-radius: 10px;
+}
+
+#box2 button{
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    color: rgba(63, 67, 147,0.75);
+
     border-color: white;
     
     border-radius: 10px;
@@ -155,14 +189,25 @@ input:checked + .slider:before {
     opacity: 0.75;
 } 
 
-.box hr {
+#box1 hr,#box3 hr {
     width: 80%; 
     border: 1px solid gray;
     opacity: 0.5; 
     
 } 
 
-.box:hover{
+#box2 hr {
+    width: 80%; 
+    border: 1px solid white;
+    opacity: 0.5; 
+    
+} 
+
+.box:hover button{
+    cursor: pointer;
+}
+
+/* .box:hover{
 
     transform: scale(1.1);
     transition: all 0s ease-in 0s;
@@ -186,7 +231,7 @@ input:checked + .slider:before {
     border: 1px solid white;
     opacity: 0.5; 
    
-} 
+}  */
 
 
 
